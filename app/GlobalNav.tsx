@@ -10,12 +10,14 @@ export default function GlobalNav() {
 
   return (
     <>
-    <ul className='flex'>
-      <li className='p-5'><Link href='/'>Pupster</Link></li>
-      <li className='p-5'><Link href='/'>About</Link></li>
-      <li className='p-5'><Link href='/discover'>Discover</Link></li>
-      <li className='p-5'><Link href='/search'>Search</Link></li>
+    <nav className='bg-neutral-100'>
+    <ul className='flex text-slate-500'>
+      <li className='p-5 hover:text-black'><Link href='/'>Pupster</Link></li>
+      <li className='p-5 hover:text-black'><Link href='/'>About</Link></li>
+      <li className='p-5 hover:text-black'><Link href='/discover'>Discover</Link></li>
+      <li className='p-5 hover:text-black'><Link href='/search'>Search</Link></li>
     </ul>
+    </nav>
     </>
   );
 }
