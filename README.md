@@ -1,24 +1,32 @@
-# Next.js + Turbopack App Directory Playground
+## Pupster
 
-[Turbopack](https://turbo.build/pack) is a new incremental bundler optimized for JavaScript and TypeScript, written in Rust by the creators of Webpack and Next.js at [Vercel](https://vercel.com). On large applications Turbopack updates 10x faster than Vite and 700x faster than Webpack ([benchmark](https://turbo.build/pack/docs/benchmarks)). For the biggest applications the difference grows even more stark with updates up to 20x faster than Vite.
+Welcome to my Pupster App! This app allows the user to discover dog pictures using the search method. It also allows the user to like and dislike dog pictures using the discover method. The user has a 1 in 5 chance of being like back by the dog pictures.
 
-This playground is a mirror of the [Next.js v13 App Directory Playground](https://github.com/vercel/app-playground), but uses Turbopack as the Next.js development server (`next dev --turbo`).
+### Live - https://onkurspupster.netlify.app
 
-**As a reminder, Turbopack is currently in alpha and not yet ready for production. We appreciate your ongoing support as we work to make it ready for everyone.**
+### How To Use -
 
-## Running Locally
+- Clone this repo
+  - git clone https://github.com/OnkurLal/plenty-of-dogs.git
+- Navigate to plenty-fo-dogs
+  - cd plenty-of-dogs
+- Install dependencies
+  - npm install
+- Start development server
+  - npm run dev
+- This will start the development server at http://localhost:3000. The page will automatically reload if you make changes to the code and save.
 
-1. Install dependencies: `yarn`
-1. Start the dev server: `yarn dev`
+### How To Deploy -
 
-**Note:** The playground uses [Tailwind CSS](https://tailwindcss.com) via [PostCSS](https://turbo.build/pack/docs/features/css#postcss).
+Deploy using netlify
 
-For more information, see: https://turbo.build/pack/docs/features/css#tailwind-css
+- Login into netlify with github
+- Next select the repo you want to deploy
+- After selecting netlify will automatially deploy your website.
 
-## Documentation
+### Tech Stack Used
 
-https://nextjs.link/with-turbopack
-
-## Providing Feedback
-
-https://nextjs.link/turbopack-feedback
+- Typescript
+- TailwindCSS
+- NextJS
+- Calls https://dog.ceo/dog-api/ API for dog pictures
