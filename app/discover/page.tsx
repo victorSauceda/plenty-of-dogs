@@ -1,5 +1,4 @@
 'use client';
-import { borderColor, borderRadius, style } from '@mui/system';
 import React, {useState, useEffect} from 'react';
 
 export default function Page() {
@@ -44,7 +43,7 @@ export default function Page() {
     };
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <p className='container grid justify-items-center'>Loading...</p>;
       }
     
       if (error) {
@@ -57,7 +56,7 @@ export default function Page() {
         <h3 className='text-2xl pb-4'>Thumbs up on any pups you'd like to meet!</h3>
         <div className='relative'>
         {dogData && <img src={dogData?.message} alt="dog" style={{height:400, width:400}}/> }
-        <button name='thumbsup' onClick={handleClick} className="p-2 text-xl absolute bg-green-700 bottom-7 right-2 rounded-full">👍</button>
+        <button name='thumbsup' onClick={(e) => handleClick(e)} className="p-2 text-xl absolute bg-green-700 bottom-7 right-2 rounded-full">👍</button>
         <button onClick={(e) => handleClick(e)} className="p-2 text-xl absolute bottom-7 left-2 bg-red-600 rounded-full">👎</button>
         </div>
         <h1 className='text-4xl p-4'>Made friends with {matches} pups so far!</h1>
