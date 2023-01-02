@@ -22,6 +22,7 @@ export default function Page() {
     } finally {
       setLoading(false);
     }
+    setInputValue('')
   };
   const dogDataMap = dogData?.message.map((item: string) => {
     return (
@@ -33,21 +34,26 @@ export default function Page() {
   }
   return (
     <div className="flex flex-col items-center">
-      <h1 className="mb-4 text-3xl font-bold">Search by Breed</h1>
+      <h1 className="m-4 text-3xl ">Search by Breed!</h1>
       <form onSubmit={handleSubmit} className="w-full max-w-sm">
-        <label className="mb-2 block text-xl font-bold">
+        <div className='w-full'>
+        <label className="m-4m block text-xl">
           Breed name:
+          <br />
           <input
             type="text"
-            placeholder="type a dogbreed to begin"
+            placeholder="Type in a dogbreed to begin"
             value={inputValue}
             onChange={handleChange}
-            className="form-input w-full"
+            className="form-input w-full mt-4 outline outline-2 outline-offset-2 outline-neutral-200"
           />
         </label>
-        <button type="submit" className="btn btn-blue mt-4 w-full">
+        </div >
+        <div className='grid justify-items-center'>
+        <button type="submit" className="btn rounded bg-green-500 text-white mt-4 py-1 px-4 hover:bg-green-700">
           Search
         </button>
+        </div>
       </form>
       {dogData ? (
         <div className="mt-8 grid grid-cols-3 gap-4">{dogDataMap}</div>
